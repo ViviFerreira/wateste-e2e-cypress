@@ -25,7 +25,7 @@ describe('Fluxo de Grupos de Alocação', () => {
 		cy.contains('td', nomeGrupo) 
 			.parent('tr') 
 			.within(() => { 
-				cy.contains('button', 'Editar').click() // 
+				cy.contains('button', 'Editar').click() 
 			})
 		cy.get('#name').clear().type(nomeGrupoUpdate);
 		cy.intercept('PUT', '/api/AllocationGroup/**').as('atualizarGrupo');
@@ -39,7 +39,7 @@ describe('Fluxo de Grupos de Alocação', () => {
 		cy.contains('td', nomeGrupoUpdate) 
 			.parent('tr') 
 			.within(() => { 
-				cy.contains('button', 'Excluir').click() // 
+				cy.contains('button', 'Excluir').click() 
 			})
 		cy.get('.ant-popconfirm').should('be.visible')
 		cy.contains('span', 'OK').click()
