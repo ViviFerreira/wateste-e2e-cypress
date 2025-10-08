@@ -1,4 +1,4 @@
-describe('Fluxo de etiquetas', () => {
+describe('Fluxo de Etiquetas', () => {
 	before(() => {
 		cy.visit('/');
 		cy.fixture('user.json').then((user) => {
@@ -6,7 +6,7 @@ describe('Fluxo de etiquetas', () => {
 		});
 	});
 
-	it('Criar etiqueta', () => {
+	it('Criar Etiquetas', () => {
 		cy.contains('.ant-btn', 'Criar etiqueta').click();
 		cy.get('.ant-modal-content').should('be.visible');
 		cy.get('#name').type('Etiqueta Teste');
